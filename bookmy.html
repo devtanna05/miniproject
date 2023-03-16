@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/book.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="loading"></div>
+  <div class="wrapper-1">
+    <nav>
+      <a href="#" class="logo"><img src="Logos/logo-1.png" alt=""></a>
+      <input type="checkbox" name="" id="toggle">
+      <label for="toggle"><i class="fa fa-bars"></i></label>
+      <div class="menu">
+        <ul>
+          <li><a class="list" href="index.html">Home</a></li>
+          <li><a class="list" href="booking.html">Booking</a></li>
+          <li><a class="list" href="#">Gift card</a></li>
+          <li><a class="list" href="#">Deals</a></li>
+          <li><a class="list" href="login.html">Login</a></li>
+          <li><a class="list" href="sign-up.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <br>
+  <br>
+    <div class="boot"><div><span id="first-name"></span></div> to <div><span id="last-name"></span></div></div>
+
+    <form id="form">
+      <input type="text" id="pname">
+
+    </form>
+    <button onclick="myfunc()">Print</button>
+    
+
+    <script>
+      const form = document.getElementById('form');
+      const pname = document.getElementById('pname');
+
+      function myfunc(){
+        window.print()
+      }
+
+      const departure = localStorage.getItem('first-name');
+    const arrival = localStorage.getItem('last-name');
+
+    document.getElementById('first-name').textContent = departure;
+    // document.getElementsByClassName('first-name').textContent = departure;
+    document.getElementById('last-name').textContent = arrival;
+    // document.getElementsByClassName('last-name').textContent = arrival;
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

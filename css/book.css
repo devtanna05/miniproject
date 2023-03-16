@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body{
+  background: #fff;
+  font-family: 'kanit';
+}
+/* booking*/
+.booking-fl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flights {
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  display: block;
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  border-radius: 15px;
+  border: solid #efefef 1px;
+}
+
+.book {
+  margin-left: 120px;
+  margin: 20px;
+  justify-content: space-around;
+  color: black;
+  display: flex;
+}
+.bttp{
+  background-color: #23484e;
+  color: #ffdb29;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  position: fixed;
+  bottom: 0;
+  translate: middle;
+  cursor: pointer;
+}
+.bttp:hover{
+  color: white;
+}
+
+.flogo {
+  margin-top: 10px;
+  height: 20px;
+}
+.block {
+  display: block;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.fname {
+  font-size: 18px;
+  font-family: 'kanit';
+  margin-top: -4px;
+}
+.fdetail{
+  margin-top: 2px;
+  color: #1DA1F2;
+}
+.poin{
+  cursor: pointer;
+}
+
+.flights:hover {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+  cursor: pointer;
+}
+.abf{
+  display: flex;
+  justify-content: space-around;
+}
+.des{
+  display: flex;
+  padding-left: 100px;
+  gap: 5px;
+}
+.fno{
+  font-size: 12px;
+  font-weight: 400;
+  color: #8c8c8c;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+.dep{
+  padding-left: 185px;
+}
+.cheap{
+  padding-right: 10px;
+  margin-top: 2px;
+  color: #1DA1F2;
+  cursor: pointer;
+}
+.bookbtn button{
+  padding: 10px;
+  border-radius: 5px;
+  border: solid #1DA1F2 1px;
+  background-color: white;
+  color: #1DA1F2;
+  cursor: pointer;
+}
+.bookbtn button:hover{
+  background-color: #1DA1F2;
+  color: white;
+}
+.oflogo{
+  height: 30px;
+}
+.fname1{
+  font-size: 10px;
+  visibility: hidden;
+}
+.block1{
+  display: block;
+  text-align: left;
+}
+table td{
+  display: table-cell;
+  justify-content: space-around;
+  height: auto;
+  width: auto;
+}
+.boot{
+  height: 100%;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+  padding: 25px;  
+}

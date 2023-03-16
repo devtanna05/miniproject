@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Libre+Barcode+39");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Merienda");
+
+body,
+html {
+	background: #bbbbbb;
+	height: 100%;
+	display: grid;
+}
+
+    .ticket {
+	height: 20vw;
+	width: 60vw;
+	margin: auto;
+	border-radius: 2vw;
+	position: relative;
+	background: white;
+}
+
+#banner {
+	height: 20vw;
+	border-radius: 2vw;
+	border-top: 4vw solid #3399ff;
+	font-family: "Merienda";
+	color: white;
+}
+
+#mainbanner {
+	position: absolute;
+	top: -0.4vw;
+	left: 4.5vw;
+	font-size: 3vw;
+}
+
+#mainbanner img {
+	vertical-align: middle;
+	height: 2vw;
+	width: 4vw;
+}
+
+#tearoffbanner {
+	position: absolute;
+	top: 1vw;
+	left: 46.7vw;
+	font-size: 1.2vw;
+}
+
+#tearoffbanner img {
+	vertical-align: middle;
+	height: 1vw;
+	width: 2vw;
+}
+
+#barcode {
+	overflow: hidden;
+	height: 3vw;
+	width: 13vw;
+	position: absolute;
+	top: 10vw;
+	left: -2vw;
+	font-size: 4em;
+	font-family: "Libre Barcode 39";
+	transform: rotate(-90deg) scale(1, 2.5);
+}
+
+#holes {
+	height: 100%;
+	position: absolute;
+	top: -1.8vw;
+	left: 44vw;
+}
+
+#holes div {
+	width: 1.8vw;
+	height: 1.8vw;
+	border-radius: 100%;
+	background: #bbbbbb;
+	margin-top: 0.5vw;
+}
+
+#data {
+	text-transform: uppercase;
+	font-size: 0.8vw;
+	font-family: "Open Sans";
+}
+
+#maindata {
+	margin: 0.5vw;
+	position: absolute;
+	width: 35vw;
+	height: 16vw;
+	top: 4vw;
+	left: 9vw;
+}
+
+#data .box {
+	width: 17vw;
+	display: inline-block;
+}
+
+#data .box .header {
+	display: block;
+}
+
+#data .box .body {
+	font-size: 1.7vw;
+}
+
+#data .box.boarding {
+	width: 17vw;
+	bottom: 3vw;
+	left: 9.3vw;
+	position: absolute;
+	text-align: center;
+	border: 2px solid black;
+	margin-top: 0.3vw;
+	margin-left: 6vw;
+}
+#data .box.boarding .header {
+	font-size: 1.8vw;
+}
+
+#data .box.boarding .body {
+	font-size: 1.5vw;
+}
+
+#tearoffdata {
+	position: absolute;
+	width: 13vw;
+	height: 16vw;
+	top: 0vw;
+	left: 37vw;
+	font-size: 0.8vw;
+}
+
+#tearoffdata .box {
+	width: 13vw;
+	display: block;
+}
+
+#tearoffdata .box .header {
+	text-decoration: none;
+}
+#tearoffdata .box .body {
+	margin-left: 1vw;
+	font-size: 1.2vw;
+}
+
+#tearoffdata .box.seat {
+	margin-top: 0vw;
+}
+#tearoffdata .box.seat .body {
+	font-size: 2vw;
+}
+
+  </style>
+</head>
+<body>
+  <div class="ticket">
+    <div id="banner">
+      <div id="topbanner"></div>
+      <span id="mainbanner">
+        <img src="Logos/logo-1.png">
+        My Wings
+      </span>
+      <span id="tearoffbanner">
+        <img src="Logos/logo-1.png">
+        My Wings
+      </span>
+    </div>
+    <div id="barcode">
+      
+    </div>
+    <div id="data">
+      <div id="maindata">
+        <div class="box">
+          <span class="header">
+            Passenger Name
+          </span>
+          <span class="body" id="demo">
+            
+          </span>
+        </div>
+        <div class="box">
+          <span class="header">
+            Flight Number
+          </span>
+          <span class="body">
+            LUKW4L 3345
+          </span>
+        </div>
+        <div class="box">
+          <span class="header">
+            From
+          </span>
+          <span class="body">
+            <div><span id="first-name"></span></div>
+          </span>
+        </div>
+        <div class="box">
+          <span class="header">
+            Date
+          </span>
+          <span class="body">
+            <div><span id="ladate"></span></div>
+          </span>
+        </div>
+        <div class="box">
+          <span class="header">
+            To
+          </span>
+          <span class="body">
+            <div><span id="last-name"></span></div>
+          </span>
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+          <span class="header">
+            Gate
+          </span>
+          <span class="body">
+            B-10
+          </span>
+        </div>
+        <div class="box boarding">
+          <span class="header">
+            Boarding Time
+          </span>
+          <span class="body">
+            12:00
+          </span>
+        </div>
+  
+        <div id="tearoffdata">
+          <div class="box">
+            <span class="header">
+              Passenger Name
+            </span>
+            <span class="body" id="demo">
+            </span>
+          </div>
+          <div class="box">
+            <span class="header">
+              Flight Number
+            </span>
+            <span class="body">
+              LUKW4L 3345
+            </span>
+          </div>
+          <div class="box">
+            <span class="header">
+              Date
+            </span>
+            <span class="body">
+              <div><span id="ladate"></span></div>
+            </span>
+          </div>
+          <div class="box">
+            <span class="header">
+              Gate
+            </span>
+            <span class="body">
+              B-10
+            </span>
+          </div>
+          <div class="box seat">
+            <span class="header">
+              Seat
+            </span>
+            <span class="body">
+              <b>23F</b>
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <div id="holes">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      
+
+    </div>
+  
+    <!--
+    <p>BWI</p>
+    <p>SAN</p>
+    <p>Gate: B3</p>
+    <p>Flight: 2005</p>
+    <p>Boards: 10:25 a.m.</p>
+    <p>Arrives: 1:05 p.m.</p>
+    <p>Seat: 11E</p>
+    <p>Group: 3</p>-->
+
+    <script>
+      
+      window.print()
+        let text;
+        let person = prompt("Please enter passenger name:");
+        if (person == null || person == "") {
+          text = "Please enter passenger name.";
+        } else {
+          text = person ;
+        }
+      
+        document.getElementById("demo").innerHTML = text;
+
+      const firstName = localStorage.getItem('first-name');
+      const lastName = localStorage.getItem('last-name');
+      const date = localStorage.getItem('ladate');
+  
+      document.getElementById('first-name').textContent = firstName;
+      // document.getElementsByClassName('first-name').textContent = firstName;
+      document.getElementById('last-name').textContent = lastName;
+      // document.getElementsByClassName('last-name').textContent = lastName;
+      document.getElementById('ladate').textContent = date;
+  
+      // const firstName = localStorage.getItem('first-name1');
+      // const lastName = localStorage.getItem('last-name1');
+  
+      // document.getElementById('first-name1').textContent = firstName;
+      // // document.getElementsByClassName('first-name').textContent = firstName;
+      // document.getElementById('last-name1').textContent = lastName;
+      // // document.getElementsByClassName('last-name').textContent = lastName;
+    </script>
+</body>
+</html>
